@@ -14,35 +14,42 @@ div{
 <script>
 
 var counter = 0;
-while(counter < 100){
+while(counter < 300){
 	var d = document.createElement("div");
 	//			 rgb(255, 0, 0)
 	// random variables
-	var red = parseInt(Math.random()+256);
-	var green = parseInt(Math.random()+256);
-	var blue = parseInt(Math.random()+256);
-	var numberone = parseInt(Math.random()+601);
+	var hue = parseInt(Math.random()*36);
+	var sat = parseInt(Math.random()*60);
+	var lightness = parseInt(Math.random()*100);
+
+	//var numberone = parseInt(Math.random()+601);
 	
+	d.style.width = parseInt(Math.random()*400)+"px";
+	//var width = numberone + "px";
+	//console.log(width);
+	//d.style.width = width;
 
-	var width = numberone + "px";
-	console.log(width);
-	d.style.width = width;
+	var color = "hsl("+hue+" , "+sat+"%, "+lightness+"%)"
+	//var color = "rgb(" + red + ", " + green + ", " + blue + ")";
+	//console.log(color);
+	//d.style.backgroundColor = color;
 
-	var color = "rgb(" + red + ", " + green + ", " + blue + ")";
-	console.log(color);
 	d.style.backgroundColor = color;
 	
-	var height = numberone + "px";
-	console.log(height);
-	d.style.height = height;
+	d.style.height = parseInt(Math.random()*400)+"px";
+	//var height = numberone + "px";
+	//console.log(height);
+	//d.style.height = height;
 	
-	var top2 = numberone + "px";
-	console.log(top2);
-	d.style.top = top2;
+	d.style.top2 = parseInt(Math.random()*1000)-100+"px";
+	//var top2 = numberone + "px";
+	//console.log(top2);
+	//d.style.top = top2;
 
-	var left = numberone + "px";
-	console.log(left);
-	d.style.left = left;
+	d.style.left = parseInt(Math.random()*1400)-100+"px";
+	//var left = numberone + "px";
+	//console.log(left);
+	//d.style.left = left;
 
 
 

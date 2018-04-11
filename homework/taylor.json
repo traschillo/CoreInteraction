@@ -1,0 +1,22 @@
+{
+	"name" : [
+	"Taylor",
+	"Sade",
+	"Raschillo"
+	],
+
+	"home":{
+	"latitude":42.0851055,
+	"longitude":-87.8260239,
+	},
+
+	"url": "https://github.com/traschillo",
+
+	"favorites":{
+	"color": "#bf0000",
+	"book": {"title": "Strange Case of Dr Jekyll and Mr Hyde", "author": "Robert Louis Stevenson"},
+	"tool": "pen",
+	"temperature": 15, 
+	
+	}
+}

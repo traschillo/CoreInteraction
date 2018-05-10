@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+div{
+	position: absolute;
+}
+
+</style>
+</head>
+<body>
+</body>
+<script>
+
+var counter = 0;
+while(counter < 10){
+	var d = document.createElement("div");
+	//			 rgb(255, 0, 0)
+	// random variables
+	var red = parseInt(Math.random())+256);
+	var green = 0;
+	var blue = 0;
+	var numberone = parseInt(Math.random())+601);
+	
+
+	var color = "rgb(" + red + ", " + green + ", " + blue + ")";
+	console.log(color);
+	d.style.backgroundColor = color;
+	
+	var width = numberone + "px";
+	console.log(width);
+	d.style.width = width;
+
+	var color = "rgb(" + red + ", " + green + ", " + blue + ")";
+	console.log(color);
+	d.style.backgroundColor = color;
+	
+	var height = numberone + "px";
+	console.log(height);
+	d.style.height = height;
+	
+	var top = numberone + "px";
+	console.log(top);
+	d.style.top = top;
+
+	var left = numberone + "px";
+	console.log(left);
+	d.style.left = left;
+
+
+
+	document.body.appendChild(d);
+	counter = counter + 1;
+}
+
+</script>
+</html>

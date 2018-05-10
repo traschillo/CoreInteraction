@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+
+	["temp", "chance of rain", "humidity"]
+//	[48.158537, .1, .5]
+
+//object has two things in it: description (key) and the variable (value)
+
+//	array
+//		[]
+
+//	object
+//		{}
+
+//the description comes first
+
+var number = 5;
+
+var weather = {
+	"temperature" : 48.158537,
+	"chance of rain" : .1,
+	"humidity" : .5
+}
+
+console.log(weather);
+
+console.log(weather["temperature"]);
+
+var doublearray = [
+	["apple","pear"],
+	["strawberry", "blueberry"],
+	["potato", "leek"]
+]
+
+//console.log( doublearray );
+
+//this
+console.log( doublearray[1][1] );
+
+//is the same as this
+var innerArray = doublearray[1];
+console.log( innerArray[1] );
+
+var classmates = {
+	"Taylor" : {
+		"breakfast" : "cereal",
+		"animal" : "elephant"
+	},
+	"Ellie" : {
+		"breakfast" : "oatmeal",
+		"animal" : "alpaca"
+	},
+	"Carolyn" : {
+		"breakfast" : "avocado toast with poached egg",
+		"animal" : "tiger"
+	}
+}
+
+console.log(classmates);
+console.log(classmates["Taylor"]["animal"] );
+
+</script>
+</body>
+</html>

@@ -18,7 +18,7 @@ while(counter < 300){
 	var d = document.createElement("div");
 	//			 rgb(255, 0, 0)
 	// random variables
-	var hue = parseInt(Math.random()*36);
+	var hue = parseInt(Math.random()*36+200);
 	var sat = parseInt(Math.random()*60);
 	var lightness = parseInt(Math.random()*100);
 
@@ -50,8 +50,6 @@ while(counter < 300){
 	//var left = numberone + "px";
 	//console.log(left);
 	//d.style.left = left;
-
-
 
 	document.body.appendChild(d);
 	counter = counter + 1;

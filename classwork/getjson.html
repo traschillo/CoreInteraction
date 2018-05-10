@@ -1,38 +1,71 @@
 <!DOCTYPE html>
 <html>
+
+<header><meta name="viewport" content="width=device-width, initial-scale=1.0"></header>
 <head>
-	<script   src="http://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
+
+	<style type="text/css">
+
+	body{
+		background-color: black;
+	}
+
+	h1{
+		color: white;
+		width: 50%
+	}
+
+	.white{
+		color: white;
+		width: 50%;
+	}
+
+	span{
+		color: red;
+	}
+
+	</style>
+
 </head>
 <body>
 
-<select></select>
+<div class="without"></div>
+
+<div class="with"></div>
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 
 <script>
-
-var url = "http://api.citybik.es/v2/networks/citi-bike-nyc";
-var myLat = 40.7359083;
-var myLon = -73.9903988;
+var url = "https://raw.githubusercontent.com/traschillo/CoreInteraction/master/Collection/Mobile%20Site/addiction.json";
 
 // $.getJSON(url, function(){});
 $.getJSON( url, function(data){
-	// console.log(data);
-	var stations = data.network.stations.sort(function(a,b){
-		var latA = Math.abs ( a.latitude - myLat );
-		var lonA = Math.abs ( a.longitude - myLon );
+	 //console.log(data);
+	
+	 var collection = data.addiction[0];
+	 //console.log(collection);
 
-		var latB = Math.abs ( b.latitude - myLat );
-		var lonB = Math.abs ( b.longitude - myLon );
+	 var withSentences = collection.with;
+	 var withoutSentences = collection.without;
 
-		return (latA + lonA) - (latB + lonB); 
-	});
+	 //console.log(withSentences);
+
+	 for (var i = 0; i < withSentences.length; i++) {
+	 	
+	 	console.log(withSentences[i])
+
+	 	$(".with").append("<h1 class='white'>" + withSentences[i] + "</h1>")
+
+	 	$(".without").append("<h1 class='red'>" + withoutSentences[i] + "</h1>")
+
+	 };
 
 
-for (var i = 0; i < stations.length; i = i+1) {
-	console.log( stations[i].name );
-	var p = document.createElement("p");
-	p.innerHTML = stations[i].free_bikes + " : " + stations[i].name;
-	document.body.appendChild(p);
-}
+
+
 
 } );
 
